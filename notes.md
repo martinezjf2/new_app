@@ -21,9 +21,19 @@ rake db:migrate SINATRA_ENV=development
 
 
 
-To-Do List
 
-call 911 to report the car plate missing 3 way call with brother-in-law
-make karla work schedule to know who picks/drops her off
-call kia finance to see what i can do within the monthly payments for the car
-continue doing the project
+Plan a Vacation
+Models
+-Users has_many :parks
+-Parks/Vacations has_many :shows
+-Shows belongs_to :parks/vacations
+
+must have a sign up, sign in, and a sign out
+validations such as uniqueness of the user login atrributes(email and password)
+Perform full CRUD actions which belongs to the USER
+Validate user input so bad data cannot be persisted to the database
+
+
+
+
+
