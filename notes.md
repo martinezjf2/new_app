@@ -15,4 +15,15 @@ Creating Databases
 rake db:create_migration NAME=create_users
 rake db:migrate
 rake db:rollback SINATRA_ENV=development
-rake db:migrate SINATRA_ENV=development 
+rake db:migrate SINATRA_ENV=development
+
+
+
+
+
+To-Do List
+
+call 911 to report the car plate missing 3 way call with brother-in-law
+make karla work schedule to know who picks/drops her off
+call kia finance to see what i can do within the monthly payments for the car
+continue doing the project
