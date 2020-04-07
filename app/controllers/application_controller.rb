@@ -11,7 +11,7 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
-  get "/business_management" do
+  get "/2" do
     erb :welcome1
   end
 

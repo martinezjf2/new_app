@@ -6,6 +6,7 @@ end
 
 
 use Rack::MethodOverride
-use VactionsController
+use VacationsController
+use UsersController
 use ShowsController
 run ApplicationController
