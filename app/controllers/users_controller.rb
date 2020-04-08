@@ -12,9 +12,15 @@ class UsersController < ApplicationController
         user = User.find_by(username: params[:username])
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id
-            flash[:message] = "Successul"
+            # flash[:message] = "Successul"
             redirect to "/users/#{user.id}"
         else
+            binding.pry
+            if user.errors.messages[:username]
+                flash[:message] = "Username not found, Please try again"
+            elsif user.errors.messages[:password]
+                flash[:message] = "Invalid Password, Please try again"
+            end
             redirect to '/signup'
         end
     end
@@ -24,16 +30,17 @@ class UsersController < ApplicationController
         user = User.create(params)
         if user.valid?
             session[:user_id] = user.id
-        #what is the difference between re-directing and rendering?
             redirect to "/users/#{user.id}"
         else
             if user.errors.messages[:username]
                 flash[:message] = "Username Has Already Been Used, Please try again"
-            elsif user.errors.messages[:password]
-                flash[:message] = "Password Invalid, Please try again" #do you think i should use this within the '/login' get request instead?
+            # elsif user.errors.messages[:password]
+            #     flash[:message] = "Password Invalid, Please try again" #should use this within the '/login' get request?
             #flash[:message] = "Input Invalid, Please try again"
-            redirect '/signup' #or maybe an error page that has 2 a href links to either signup or login
             end
+            redirect '/signup' #or maybe an error page that has 2 a href links to either signup or login
+
+        #when i try to sign up and put wrong inputs it redirects to a blank /signup.
         end
     end
 

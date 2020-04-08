@@ -36,6 +36,8 @@ validations such as uniqueness of the user login atrributes(email and password)
 Perform full CRUD actions which belongs to the USER
 Validate user input so bad data cannot be persisted to the database
 
+ #what is the difference between re-directing and rendering?
+
 
 
 
