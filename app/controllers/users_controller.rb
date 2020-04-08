@@ -36,13 +36,11 @@ class UsersController < ApplicationController
             if user.errors.messages[:username]
                 flash[:message] = "Username Has Already Been Used, Please try again"
             elsif user.errors.messages[:email]
-                flash[:message] = "Email Invalid, Please try again" #should use this within the '/login' get request?
+                flash[:message] = "Email Invalid, Please try again" 
             #flash[:message] = "Input Invalid, Please try again"
-            #.errors method can only be used when creating a new User
+            #.errors method can only be used when creating a new User. and align the input boxes within the forms
             end
-            redirect '/signup' #or maybe an error page that has 2 a href links to either signup or login
-
-        #when i try to sign up and put wrong inputs it redirects to a blank /signup.
+            redirect '/signup' 
         end
     end
 

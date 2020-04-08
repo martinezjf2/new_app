@@ -25,6 +25,23 @@
     display: block;
   }
 
+  .form {
+		margin: 0 auto;
+		width: 210px;
+	}
+
+	.form label{
+		display: inline-block;
+		text-align: right;
+		float: left;
+	}
+
+	.form input{
+		display: inline-block;
+		text-align: left;
+		float: right;
+	}
+
   .wrapper {
     background: #fff;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
