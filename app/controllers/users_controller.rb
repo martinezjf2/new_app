@@ -28,7 +28,7 @@ class UsersController < ApplicationController
             redirect to "/users/#{user.id}"
         else
             if user.errors.messages[:username]
-                flash[:message] = "Username Invalid, Please try again"
+                flash[:message] = "Username Has Already Been Used, Please try again"
             elsif user.errors.messages[:password]
                 flash[:message] = "Password Invalid, Please try again" #do you think i should use this within the '/login' get request instead?
             #flash[:message] = "Input Invalid, Please try again"

@@ -20,6 +20,11 @@
     /* line-height: 18px; */
   }
 
+  #image1 {
+    margin: auto;
+    display: block;
+  }
+
   .wrapper {
     background: #fff;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -32,23 +37,24 @@
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 42px;
     line-height: 54px;
   }
 
   h2 {
     border-bottom: 2px solid #ccc;
-    font-size: 24px;
+    font-size: 34px;
     line-height: 36px;
     margin-bottom: 16px;
   }
 
   h3 {
-    font-size: 18px;
+    font-size: 24px;
     line-height: 36px;
   }
 
   p {
+    font-size: 24px;
     margin-bottom: 18px;
   }
 
@@ -57,7 +63,7 @@
   }
 
   .content {
-    float: left;
+    float: center;
     width: 60%; /* 480px / 800px */
   }
 
