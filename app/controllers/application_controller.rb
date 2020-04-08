@@ -11,12 +11,12 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    erb :welcome
-  end
-
-  get "/2" do
     erb :welcome1
   end
+
+  # get "/2" do
+  #   erb :welcome
+  # end
 
 
 end
