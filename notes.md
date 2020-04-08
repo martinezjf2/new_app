@@ -40,5 +40,5 @@ Validate user input so bad data cannot be persisted to the database
 
 
 
-
+#<%= flash[:message] %>
 
