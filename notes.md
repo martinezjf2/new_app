@@ -21,7 +21,7 @@ rake db:rollback SINATRA_ENV=development
 rake db:migrate SINATRA_ENV=development
 
 
-
+For any information about the sinatra-flash gem, please visit https://github.com/SFEley/sinatra-flash
 
 
 
