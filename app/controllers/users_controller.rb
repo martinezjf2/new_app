@@ -1,11 +1,25 @@
 class UsersController < ApplicationController
 
+    get '/users' do
+        @users = User.all
+        erb :'users/index'
+    end
+
+
     get '/signup' do
+        if Helpers.is_logged_in?(session)
+            user = Helpers.current_user(session)
+            redirect to "/users/#{user.id}"
         erb :'users/sign_up'
+        end
     end
 
     get '/login' do
+        # if Helpers.is_logged_in?(session)
+        #     user = Helpers.current_user(session)
+        #     redirect to "/users/#{user.id}" erasing these lines will work?
         erb :'users/login'
+        # end
     end
 
     post '/login' do
@@ -45,13 +59,20 @@ class UsersController < ApplicationController
     end
 
     get '/users/:id' do
-        if User.find_by(id: params[:id])
+        if Helpers.is_logged_in?(session) && User.find_by(id: params[:id])
             @user = User.find_by(id: params[:id])
         else
             redirect to '/'
         end
         erb :'users/show'
     end
+
+
+    get '/logout' do
+        session.clear
+        redirect to '/'
+    end
+
 
 
 end

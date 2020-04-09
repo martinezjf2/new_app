@@ -42,3 +42,21 @@ Validate user input so bad data cannot be persisted to the database
 
 #<%= flash[:message] %>
 
+ #     <p class="links"><a href="#" class="logout">Log Out</a></p>
+
+ Put this under <div class="wrapper">
+
+    #     <p class="links"><a href="#"><My Vacations</a></p>
+    #     <p class="links"><a href="#"><New Vacation</a></p>
+    #     <p class="links"><a href="#"><All Vacations</a></p>
+    #     <p class="links"><a href="#"><All Users</a></p>
+        
+        #put in this div class for the nav bar, but it shows several "a href" links through the paragraph in the home welcome1.erb
+
+
+
+need help on 
+-when clicking Log_in does directs me to a blank page
+-<div class="wrapper"> in layout, does not want to show the rest of the links only Log Out
+-When i created the nav bar in layout, the majority of the words became a <a href> example in the get '/' route
+-post "/login" flash[:message], tried the invalid method but does not work?
