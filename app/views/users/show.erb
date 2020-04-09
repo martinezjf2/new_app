@@ -3,10 +3,8 @@
 <ul>
 
 <% @vacations.each do |vacation| %>
-<li><a href="/vacations/<%=vacation.id%>"> <%= vacation.name %></a></li>
+<li><a href="/vacations/<%=vacation.id%>"> <%= vacation %></a></li>
 
     <%end%>
 
 </ul>
-
-# <%= flash[:message] %>
