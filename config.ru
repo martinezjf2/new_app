@@ -8,5 +8,4 @@ end
 use Rack::MethodOverride
 use VacationsController
 use UsersController
-# use ShowsController
 run ApplicationController

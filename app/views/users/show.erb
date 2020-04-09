@@ -1,4 +1,12 @@
 <center><h2>Welcome <%= @user.username.capitalize %></h2></center>
 
+<ul>
+
+<% @vacations.each do |vacation| %>
+<li><a href="/vacations/<%=vacation.id%>"> <%= vacation.name %></a></li>
+
+    <%end%>
+
+</ul>
 
 # <%= flash[:message] %>

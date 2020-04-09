@@ -60,3 +60,5 @@ need help on
 -<div class="wrapper"> in layout, does not want to show the rest of the links only Log Out
 -When i created the nav bar in layout, the majority of the words became a <a href> example in the get '/' route
 -post "/login" flash[:message], tried the invalid method but does not work?
+-want to make the login/submit button a little bigger,
+-says NoMethodName for .name in show.erb trying to display the vacations

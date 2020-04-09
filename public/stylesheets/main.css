@@ -25,6 +25,28 @@
     display: block;
   }
 
+  label {
+    display: flex;
+    align-items: center;
+    font: iren 'Fira Sans', sans-serif;
+  }
+
+  span::after {
+    padding-left: 5px;
+  }
+
+  input:invalid + span::after {
+    content: 'x';
+  }
+  input:valid+span::after {
+    content: 'Good';
+  }
+
+  input,
+  label {
+    margin: .4rem 0;
+  }
+
   .form {
 		margin: 0 auto;
 		width: 210px;
@@ -66,7 +88,7 @@
   }
 
   h3 {
-    font-size: 24px;
+    font-size: 29px;
     line-height: 36px;
   }
 
