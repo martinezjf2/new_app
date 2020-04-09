@@ -31,10 +31,10 @@
     <div class="wrapper">
     <% if Helpers.is_logged_in?(session) %>
        <p class="links"><a href="/logout" class="logout">Log Out</a></p>
-        <p class="links"><a href="/users" class="all_users"><All Users</a></p>
-        <p class="links"><a href="/users/<%=Helpers.current_user(session).id if Helpers.is_logged_in?(session)%>"><My Vacations</a></p>
-       <p class="links"><a href="/vacations/new"><New Vacation<a><p>
-        <p class="links"><a href="#"><All Vacations</a></p>
+        <p class="links"><a href="/users" class="all_users">All Users</a></p>
+        <p class="links"><a href="/users/<%=Helpers.current_user(session).id if Helpers.is_logged_in?(session)%>">My Vacations</a></p>
+       <p class="links"><a href="/vacations/new">New Vacation</a></p>
+        <p class="links"><a href="#">All Vacations</a></p>
 
 
       <%end%>

@@ -1,6 +1,9 @@
 class VacationsController < ApplicationController
 
     get '/vacations/new' do
+        if !Helpers.is_logged_in?(session)
+            redirect '/'
+        end
         erb :'vacations/new'
     end
 
@@ -13,6 +16,9 @@ class VacationsController < ApplicationController
     end
 
     get '/vacations/:id' do
+        if !Helpers.is_logged_in?(session)
+            redirect '/'
+        end
         @vacation = Vacation.find_by(id: params[:id])
         if !@recipe
             redirect to '/vacations'
@@ -20,5 +26,7 @@ class VacationsController < ApplicationController
         erb :'vacations/show'
     end
 
+#Also need to add a delete vacations button, and create a flash message when successfully deleted
 
+#Search how to change backgrounds for every time i refresh the login page, or just assign a background for the signup and the login
 end

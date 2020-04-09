@@ -15,11 +15,11 @@ class UsersController < ApplicationController
     end
 
     get '/login' do
-        # if Helpers.is_logged_in?(session)
-        #     user = Helpers.current_user(session)
-        #     redirect to "/users/#{user.id}" erasing these lines will work?
+        if Helpers.is_logged_in?(session)
+            user = Helpers.current_user(session)
+            redirect to "/users/#{user.id}"
+         end
         erb :'users/login'
-        # end
     end
 
     post '/login' do
@@ -31,9 +31,9 @@ class UsersController < ApplicationController
             redirect to "/users/#{user.id}"
         else
             # binding.pry
-            if user.invalid?
+            if !user
                 flash[:message] = "Username not found, Please try again"
-            elsif user_password.invalid?
+            elsif !user_password
                 flash[:message] = "Invalid Password, Please try again"
             end
             redirect to '/signup'

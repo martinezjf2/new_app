@@ -55,10 +55,14 @@ Validate user input so bad data cannot be persisted to the database
 
 
 
-need help on 
--when clicking Log_in does directs me to a blank page
+Need Help On:
+
+-when i click Log In, it goes to a blank page, check it out
+-when clicking Sign Up does directs me to a blank page
 -<div class="wrapper"> in layout, does not want to show the rest of the links only Log Out
 -When i created the nav bar in layout, the majority of the words became a <a href> example in the get '/' route
 -post "/login" flash[:message], tried the invalid method but does not work?
--want to make the login/submit button a little bigger,
+<!-- -want to make the login/submit button a little bigger, -->
 -says NoMethodName for .name in show.erb trying to display the vacations
+<!-- -need to add "name" for create_table "vacations" and later call it within the show.erb vacation.name -->
+-
