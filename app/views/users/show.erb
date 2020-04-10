@@ -3,7 +3,7 @@
 <ul>
 
 <% @vacations.each do |vacation| %>
-<li><a href="/vacations/<%=vacation.id%>"> <%= vacation %></a></li>
+<li><a href="/vacations/<%=vacation.id%>"> <%= vacation.start_date %></a></li>
 
     <%end%>
 

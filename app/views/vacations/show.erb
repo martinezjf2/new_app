@@ -1,6 +1,12 @@
-<h2><%= @vacations.name %></h2>
+<h2><%= @vacation %></h2>
 
-<p><%= @vacations.start_date</p>
-<p><%= @vacations.end_date</p>
-<p><%= @vacations.resort_name</p>
-<p><%= @vacations.description</p>
+<p><%= @vacation.start_date %></p>
+<p><%= @vacation.end_date %></p>
+<p><%= @vacation.resort_name %></p>
+<p><%= @vacation.description %></p>
+
+<% if Helpers.current_user(session) == @vacation.user %>
+
+<a href="/vacations/<%=@vacation.id%>/edit">Edit Vacation</a>
+
+<%end%>

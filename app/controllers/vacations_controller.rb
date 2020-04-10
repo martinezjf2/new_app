@@ -26,11 +26,25 @@ class VacationsController < ApplicationController
             redirect '/'
         end
         @vacation = Vacation.find_by(id: params[:id])
-        if !@recipe
+        if !@vacation
             redirect to '/vacations'
         end
         erb :'vacations/show'
     end #check if this method is working
+
+    get '/vacations/:id/edit' do
+        @vacation = Vacation.find_by(id: params[:id])
+        if !Helpers.is_logged_in?(session) || @vacation.user != Helpers.current_user(session)
+            redirect '/'
+        end
+        erb :'vacations/edit'
+    end
+
+    patch '/vacations/:id' do
+        vacation = Vacation.find_by(id: params[:id])
+        vacation.update(params[:vacation])
+        redirect to "/vacations/#{vacation.id}"
+    end
 
 #Also need to add a delete vacations button, and create a flash message when successfully deleted
 

@@ -62,3 +62,6 @@ Need Help On:
 <!-- -need to add "first_name" and "last_name" for create_table "vacations" and later call it within the show.erb vacation.name and in the welcome.erb, say Welcome ..@user.first_name instead of username and when i want to display "All Users" then display the name of the user instead of the username-->
 -want to customize that the login and the sign up request have different pictures, and a side bar just as like https://www.w3schools.com/howto/howto_css_form_on_image.asp, but it doesnt want to, maybe putting yield within the layout after log in?
 -when i zoom in, the top part of the bakground pic shows attached to the bottom as well.
+-not being able to create a new vacation, and my show.erb within the vacations, is not showing the content
+-edit.erb to show the content before editing the file, does not show the content
+-want to edit that the input boxes for name, resort_name are a little bigger in the new.erb(vacations) and the edit.erb(vacations)
