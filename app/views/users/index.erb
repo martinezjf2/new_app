@@ -1,4 +1,4 @@
 <h2>All Users</h2>
 <% @users.each do |user| %>
-<p><a href="/users/<%=user.id%>"> <%= user.first_name.titleize + user.last_name.titleize%></a></p>
+<p><a href="/users/<%=user.id%>"> <%= user.first_name.titleize%> <%= user.last_name.titleize%></a></p>
 <%end%>
