@@ -31,7 +31,6 @@ class UsersController < ApplicationController
             # flash[:message] = "Successul"
             redirect to "/users/#{user.id}"
         else
-            # binding.pry
             if !user
                 flash[:message] = "Username not found, Please try again"
             elsif !user_password
@@ -52,8 +51,6 @@ class UsersController < ApplicationController
                 flash[:message] = "Username Has Already Been Used, Please try again"
             elsif user.errors.messages[:email]
                 flash[:message] = "Email Invalid, Please try again" 
-            #flash[:message] = "Input Invalid, Please try again"
-            #.errors method can only be used when creating a new User. and align the input boxes within the forms
             end
             redirect '/signup' 
         end

@@ -1,0 +1,9 @@
+<h3>All Vacations</h3>
+
+<ul>
+<% @vacations.each do |vacation| %>
+    <li><a href="/vacations/<%=vacation.id%>"<%=vacation%></a></li>
+
+
+    <%end%>
+    </ul>

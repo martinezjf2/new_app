@@ -1,5 +1,11 @@
 class VacationsController < ApplicationController
 
+
+    get '/vacations' do
+        @vacations = Vacation.all
+        erb :'vacations/index'
+    end
+
     get '/vacations/new' do
         if !Helpers.is_logged_in?(session)
             redirect '/'
@@ -24,7 +30,7 @@ class VacationsController < ApplicationController
             redirect to '/vacations'
         end
         erb :'vacations/show'
-    end
+    end #check if this method is working
 
 #Also need to add a delete vacations button, and create a flash message when successfully deleted
 
