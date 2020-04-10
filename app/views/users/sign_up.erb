@@ -1,19 +1,24 @@
-<center><h1>Sign Up</h1><br /></center><br/>
-
-
 
 <form action="/signup" method="post">
+<center><h1>Sign Up</h1><br /></center><br/>
+
     <div class="form">
-        <label>Username: </label>
-            <input type="text" name="username" /><br /><br />
 
-        <label>Email: </label>
-            <input type="email" name="email" /><br /><br />
-
-        <label>Password: </label>
-            <input type="password" name="password" /><br /><br /><br />
-    </div>
     
-    <center><input type="submit" /></center>
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email" name="email" required><br/><br/>    
+
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required><br/><br/>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required><br/><br/><br/>
+        
+    <center><button type="submit" class="btn" style="height:24px; width:55px">Sign Up</button></center>
+
+    </div>
 
 </form>
+
+
+#Also, would add to add a first_name and a last_name
