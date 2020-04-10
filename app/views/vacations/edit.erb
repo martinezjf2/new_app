@@ -1,0 +1,29 @@
+<center><h2>Edit Your Vacation</h2></center>
+
+<form action="/vacations/<%= @vacation.id %>" method="post">
+<input type="hidden" name="_method" value="patch">
+<br/>
+        <label for="start_date">Start Date: </label>
+        <input type="date" value="<%=@vacation.start_date%>" id="start_date" name="vacation[start_date]" min="2020-04-01" max="3000-04-01" required>
+        <span class="validity"></span></label><br/><br/>
+  
+
+
+        <label for="end_date">End Date: </label>
+        <input type="date" value="<%=@vacation.end_date%>" id="end_date" name="vacation[end_date]" min="2020-04-01" max="3000-04-01" required>
+        <span class="validity"></span></label><br/><br/>
+
+
+
+        <label>Resort Name: </label>
+        <input type="text" value="<%=@vacation.resort_name%>" name="vacation[resort_name]" /><br /><br />
+   
+
+
+        <label>Give a Brief Description: </label>
+        <textarea id="description" value="<%=@vacation.description%>" name="vacation[description]" rows="10" cols="55"></textarea>><br /><br />
+        #may use an input tag, because the data is not showing
+
+    <center><button type="submit" class="btn" style="height:24px; width:55px">Edit</button></center>
+
+</form>
