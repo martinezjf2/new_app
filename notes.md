@@ -59,5 +59,6 @@ Need Help On:
 
 <!-- -want to make the login/submit button a little bigger, -->
 -says NoMethodName for .name in show.erb trying to display the vacations
-<!-- -need to add "first_name" and "last_name" for create_table "vacations" and later call it within the show.erb vacation.name and in the welcome.erb, say Welcome ..@user.first_name instead of username-->
--want to customize that the login and the sign up request have different pictures, and a side bar just as like https://www.w3schools.com/howto/howto_css_form_on_image.asp
+<!-- -need to add "first_name" and "last_name" for create_table "vacations" and later call it within the show.erb vacation.name and in the welcome.erb, say Welcome ..@user.first_name instead of username and when i want to display "All Users" then display the name of the user instead of the username-->
+-want to customize that the login and the sign up request have different pictures, and a side bar just as like https://www.w3schools.com/howto/howto_css_form_on_image.asp, but it doesnt want to, maybe putting yield within the layout after log in?
+-when i zoom in, the top part of the bakground pic shows attached to the bottom as well.
