@@ -42,12 +42,22 @@ class VacationsController < ApplicationController
 
     patch '/vacations/:id' do
         vacation = Vacation.find_by(id: params[:id])
-        if recipe && recipe.user == Helpers.current_user(session)
+        if vacation && vacation.user == Helpers.current_user(session)
             vacation.update(params[:vacation])
             redirect to "/vacations/#{vacation.id}"
         else
             #put a flash[:message] = Could not edit due to not being the current user
             redirect to "/recipes"
+        end
+    end
+
+    delete '/vacations/:id/delete' do
+        vacation = Vacation.find_by(id: params[:id])
+        if vacation && vacation.user == Helpers.current_user(session)
+            vacation.destroy
+            redirect to '/vacations'
+        end
+            redirect to '/vacations'
     end
 
 #Also need to add a delete vacations button, and create a flash message when successfully deleted
