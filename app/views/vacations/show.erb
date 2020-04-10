@@ -6,13 +6,13 @@
 <p>Description: <%= @vacation.description %></p><br/>
 
 <% if Helpers.current_user(session) == @vacation.user %>
-<a href="/vacations/<%=@vacation.id%>/edit">Edit Vacation</a>
+<a href="/vacations/<%=@vacation.id%>/edit">Edit Vacation</a><br/><br/>
 
 <form action="/vacations/<%=@vacation.id%>/delete" method="post">
 
 <input type="hidden" name="_method" value="delete">
 
-<center><button type="submit" class="btn" style="height:24px; width:55px">Delete</button></center>
+<center><button type="submit" class="btn">Delete</button></center>
 </form>
 
 <%end%>

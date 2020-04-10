@@ -68,7 +68,7 @@
   }
   /* Control the height of the image */
   
-  input[type=text]:focus, input[type=password]:focus {
+  input[type=text]:focus, input[type=password]:focus, input[type=eamil]:focus {
     background-color: #ddd;
     outline: none;
   }
@@ -135,7 +135,7 @@
     margin: 16px auto;
     max-width: 960px;
     padding: 2.25%; /* 18px / 800px */
-    width: 50%;
+    width: 100%;
   }
 
   h1 {

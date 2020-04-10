@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200406210404) do
+ActiveRecord::Schema.define(version: 20200410175712) do
 
   create_table "shows", force: :cascade do |t|
     t.string  "start_time"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20200406210404) do
     t.string "username"
     t.string "email"
     t.string "password_digest"
+    t.string "first_name"
+    t.string "last_name"
   end
 
   create_table "vacations", force: :cascade do |t|
@@ -32,6 +34,7 @@ ActiveRecord::Schema.define(version: 20200406210404) do
     t.string  "end_date"
     t.string  "resort_name"
     t.integer "user_id"
+    t.string  "vacation_name"
   end
 
 end
