@@ -1,11 +1,11 @@
-<h2>Welcome <%= @user.username.capitalize %></h2>
+<h2>Welcome <%= @user.first_name.capitalize %></h2>
 
 #want to make the header to be in one line
 
 <ul>
 
 <% @vacations.each do |vacation| %>
-<li><a href="/vacations/<%=vacation.id%>"> <%= vacation.start_date %></a></li>
+<li><a href="/vacations/<%=vacation.id%>"> <%= vacation.vacation_name %></a></li>
 
     <%end%>
 

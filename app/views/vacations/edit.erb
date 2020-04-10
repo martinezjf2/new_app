@@ -3,6 +3,12 @@
 <form action="/vacations/<%= @vacation.id %>" method="post">
 <input type="hidden" name="_method" value="patch">
 <br/>
+
+        <label>Vacation Name: </label>
+        <input type="text" value="<%=@vacation.vacation_name%>" name="vacation[vacation_name]" /><br /><br />
+
+
+
         <label for="start_date">Start Date: </label>
         <input type="date" value="<%=@vacation.start_date%>" id="start_date" name="vacation[start_date]" min="2020-04-01" max="3000-04-01" required>
         <span class="validity"></span></label><br/><br/>
