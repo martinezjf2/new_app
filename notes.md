@@ -64,3 +64,5 @@ Need Help On:
 -when i zoom in, the top part of the bakground pic shows attached to the bottom as well
 -edit.erb to show the content before editing the file, does not show the description content
 -want to edit that the input boxes for name, resort_name are a little bigger in the new.erb(vacations) and the edit.erb(vacations)
+-in show.erb for vacations,i want to increase the font-size for the "Edit Vacation" a href link, also, i want to display the date instead of 2020-04-14, i want to display it like April 14, 2020. What can i use to do that?
+-index.erb in vacations are not displaying all the vacations?
