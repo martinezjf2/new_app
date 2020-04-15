@@ -14,7 +14,7 @@ class VacationsController < ApplicationController
     end
 
     post '/vacations' do
-       vacation = Vacation.create(params)
+       vacation = Vacation.new(params)
        user = Helpers.current_user(session)
        vacation.user = user
        vacation.save
@@ -25,6 +25,7 @@ class VacationsController < ApplicationController
         if !Helpers.is_logged_in?(session)
             redirect '/'
         end
+        # Helpers.if_not_logged_in(session)
         @vacation = Vacation.find_by(id: params[:id])
         if !@vacation
             redirect to '/vacations'
@@ -47,7 +48,7 @@ class VacationsController < ApplicationController
             redirect to "/vacations/#{vacation.id}"
         else
             #put a flash[:message] = Could not edit due to not being the current user
-            redirect to "/recipes"
+            redirect to "/vacations"
         end
     end
 
