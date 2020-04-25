@@ -4,6 +4,7 @@
 <html>
     <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            
             <style>
                 .alert {
                 padding: 20px;
@@ -30,10 +31,11 @@
 
     </head>
         <body>
+        <% if !@user_password %>
+
             <div class="alert">
-                <% if !@user_password %>
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-                    <strong>Warning! <%= flash[:message]%>!</strong> 
+                    <strong><%=flash[:message]%></strong> 
                 <%end%>
             </div>
         </body><br/><br/>
