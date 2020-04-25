@@ -75,3 +75,5 @@ Need Help On:
 -ask for the license, how do i do that?
 
 <!-- -when logging in, undefined method got 'authenticate' i guess i fixed it-->
+-login.erb i want to show the tab bar(Warning), only when there is an error with the password.
+-when i type in a wrong username to the login, it shows me a NoMethodError. how can i fix this?
