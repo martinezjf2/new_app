@@ -2,50 +2,47 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.alert {
-  padding: 20px;
-  background-color: #f44336;
-  color: white;
-}
+    <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                .alert {
+                padding: 20px;
+                background-color: #f44336;
+                color: white;
+                }
 
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+                .closebtn {
+                margin-left: 15px;
+                color: white;
+                font-weight: bold;
+                float: right;
+                font-size: 22px;
+                line-height: 20px;
+                cursor: pointer;
+                transition: 0.3s;
+                }
 
-.closebtn:hover {
-  color: black;
-}
-</style>
-
-
-</head>
+                .closebtn:hover {
+                color: black;
+                }
+            </style>
 
 
-<body>
-<div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  <strong>Warning! <%= flash[:message]%>!</strong> 
-</div>
+    </head>
 
-</body><br/><br/>
+
+        <body>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                <strong>Warning! <%= flash[:message]%>!</strong> 
+            </div>
+        </body><br/><br/>
 
 </html>
 
 
 <form action="/login" method="post">
-
-<center><h1>Login</h1><br/></center><br/>
-
+    <center><h1>Login</h1><br/></center><br/>
     <div class="form">
         <label for="username"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="username" required><br/><br/>
@@ -55,7 +52,4 @@
         
        <button type="submit" class="btn">Login</button>
     </div>
-    
-
-
 </form>
