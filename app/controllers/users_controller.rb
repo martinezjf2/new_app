@@ -25,8 +25,8 @@ class UsersController < ApplicationController
 
     post '/login' do
         user = User.find_by(username: params[:username])
-        @user_password = user.authenticate(params[:password])
-        if user && @user_password
+        # user_password = user.authenticate(params[:password])
+        if user && user.authenticate(params[:password])
             session[:user_id] = user.id
             # flash[:message] = "Successul"
             redirect to "/users/#{user.id}"
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
         else
             if !user
                 flash[:message] = "Username not found, Please try again"
-            elsif !@user_password
+            elsif !user.authenticate(params[:password])
                 flash[:message] = "Invalid Password, Please try again"
             end
             redirect to '/login'
