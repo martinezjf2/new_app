@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html>
+
     <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
             
@@ -30,15 +31,17 @@
 
 
     </head>
-        <body>
-        <% if !@user_password %>
+<% if flash[:message] %>
 
+
+        <body>
             <div class="alert">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
                     <strong><%=flash[:message]%></strong> 
-                <%end%>
             </div>
         </body><br/><br/>
+        <%end%>
+
 </html>
 
 
